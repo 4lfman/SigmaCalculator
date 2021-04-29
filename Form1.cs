@@ -14,16 +14,19 @@ namespace SigmaCalculator
 {
     public partial class Form1 : Form
     {
+        List<double> terms = new List<double>();
+
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void CalculateButton_Click(object sender, EventArgs e)
         {
             double total = 0;
             var expr = new Expression(FormulaBox.Text);
-
+            terms.Clear();
             for (int i = int.Parse(InitValueBox.Text); i <= int.Parse(UpperBoundBox.Text); i++)
             {
                 expr.Parameters["i"] = i;
@@ -41,9 +44,17 @@ namespace SigmaCalculator
                         args.Result = argsFactorial;
                     }
                 };
-                total += double.Parse(expr.Evaluate().ToString());
+                double value = double.Parse(expr.Evaluate().ToString());
+                terms.Add(value);
+                total += value;
             }
             ResultLabel.Text = total.ToString();
+        }
+
+        private void StepsButton_Click(object sender, EventArgs e)
+        {
+            CalculateButton_Click(this, e);
+            MessageBox.Show(string.Join(" + ", terms), "Steps");
         }
     }
 }

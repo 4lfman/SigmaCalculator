@@ -37,6 +37,7 @@ namespace SigmaCalculator
             this.CalculateButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.StepsButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // UpperBoundBox
@@ -107,12 +108,23 @@ namespace SigmaCalculator
             this.label3.TabIndex = 7;
             this.label3.Text = "The sum is:";
             // 
+            // StepsButton
+            // 
+            this.StepsButton.Location = new System.Drawing.Point(381, 214);
+            this.StepsButton.Name = "StepsButton";
+            this.StepsButton.Size = new System.Drawing.Size(75, 23);
+            this.StepsButton.TabIndex = 8;
+            this.StepsButton.Text = "Show steps";
+            this.StepsButton.UseVisualStyleBackColor = true;
+            this.StepsButton.Click += new System.EventHandler(this.StepsButton_Click);
+            // 
             // Form1
             // 
             this.AcceptButton = this.CalculateButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(533, 315);
+            this.Controls.Add(this.StepsButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.CalculateButton);
@@ -139,6 +151,7 @@ namespace SigmaCalculator
         private System.Windows.Forms.Button CalculateButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button StepsButton;
     }
 }
 
