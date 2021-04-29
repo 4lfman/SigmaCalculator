@@ -135,7 +135,7 @@ namespace SigmaCalculator
             this.Controls.Add(this.UpperBoundBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
-            this.Text = "0";
+            this.Text = "Sigma Calculator";
             this.ResumeLayout(false);
             this.PerformLayout();
 

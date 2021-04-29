@@ -18,8 +18,7 @@ namespace SigmaCalculator
 
         public Form1()
         {
-            InitializeComponent();
-            
+            InitializeComponent();   
         }
 
         private void CalculateButton_Click(object sender, EventArgs e)
